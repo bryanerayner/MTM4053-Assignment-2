@@ -10,7 +10,7 @@ $defaults-collapsible-float: $defaults-float !default;
 {
 	@extend %clearfix;
 
-	&.is-active
+	&.is-collapsible-active
 	{
 
 		&.is-collapsed
@@ -42,7 +42,7 @@ $defaults-collapsible-float: $defaults-float !default;
 
 	}
 
-	&:not([class*=is-active]) > .m_collapseButton
+	&:not([class*=is-collapsible-active]) > .m_collapseButton
 	{
 		display:none;
 	}

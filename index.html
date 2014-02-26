@@ -8,19 +8,20 @@
 	</head>
 	<body>
 		<header class="l_topbar">
-			<div class="l_constrained l_grid_container">
-				<div class="logo l_grid_cell-sm-1 l_grid_cell-wide">
+			<div class="l_constrained l_grid_container collapsible is-collapsible-active is-collapsed">
+				<div class="logo l_grid_cell-sm-8 l_grid_cell-med-1 l_grid_cell-wide">
 					<img src="http://placehold.it/68x68" alt="">
 				</div>
-				<nav class="collapsible l_right">
-					<div class="m_collapseButton">
-
+				<div class="m_collapseButton l_right navicon">
+						<div class = "m_icon"></div>
 					</div>
-					<ul class="m_collapsible is-collapsed nav nav-primary l_right">
-						<li class="m_collapse m_navItem"><a href="">About</a></li>
-						<li class="m_collapse m_navItem"><a href="">Visit Us</a></li>
-						<li class="m_collapse m_navItem"><a href="">Gallery</a></li>
-						<li class="m_collapse m_navItem"><a href="">Contact</a></li>
+				<nav class="l_grid_cell-sm-12 l_grid_cell-med-10 l_right">
+					
+					<ul class="nav nav-primary l_right">
+						<li class="m_collapsible_target m_navItem"><a href="">About</a></li>
+						<li class="m_collapsible_target m_navItem"><a href="">Visit Us</a></li>
+						<li class="m_collapsible_target m_navItem"><a href="">Gallery</a></li>
+						<li class="m_collapsible_target m_navItem"><a href="">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -137,5 +138,15 @@
 				<p>&copy; 2014 Bryan Rayner</p>
 			</div>
 		</footer>
+
+		<script type="text/javascript" src = "bower_components/zepto/zepto.min.js"></script>		
+		<script type="text/javascript" src = "bower_components/SassySMACSS/lib/collapsible.js"></script>
+		<script type="text/javascript" src = "bower_components/SassySMACSS/lib/navicon.js"></script>
+		<script>
+			Zepto(function($){
+			  Sassy.collapsible();
+			  Sassy.navicon();
+			});
+		</script>
 	</body>
 </html>

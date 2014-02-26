@@ -59,7 +59,11 @@ $defaults-media_queries-biggest: "desktop" !default;
 	{
 		@if ($mediaQuery != "sm")
 		{
-			@content;
+			@media (min-width: get_mediaQuery($mediaQuery))
+			{
+				@content;
+			}
+			
 		}
 	}
 }

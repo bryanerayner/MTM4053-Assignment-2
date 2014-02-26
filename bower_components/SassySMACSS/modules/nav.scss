@@ -12,9 +12,11 @@ $defaults-nav-secondary-float:$defaults-float !default;
 {
 	display:block; float:$defaults-nav--m_navItem-float; width:100%;
 
+	width: 100%; padding: .4em;
+
 	@include mediaQuery_aboveSm()
 	{
-		width:auto; padding: 4%; display: table-cell;
+		width:auto; padding: 1.5em 4%; display: table-cell;
 	}
 }
 
@@ -23,11 +25,11 @@ $defaults-nav-secondary-float:$defaults-float !default;
 
 .nav
 {
-	float:$defaults-nav-float; display: table-row;
+	float:$defaults-nav-float; display: table-row; width: 100%;
 
 	> .m_navItem, > .m_navGroup
 	{
-		@include nav--m_navItem();
+		@include nav--m_navItem();  
 	}
 
 	.m_navGroup
