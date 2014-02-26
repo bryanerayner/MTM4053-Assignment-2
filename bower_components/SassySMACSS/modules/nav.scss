@@ -12,7 +12,7 @@ $defaults-nav-secondary-float:$defaults-float !default;
 {
 	display:block; float:$defaults-nav--m_navItem-float; width:100%;
 
-	width: 100%; padding: .4em;
+	padding: .4em;
 
 	@include mediaQuery_aboveSm()
 	{

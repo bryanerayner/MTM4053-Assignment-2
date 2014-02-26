@@ -51,14 +51,15 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 		list-style: none;
 	}
 
-	// For bigger than medium, swap the location of things.
+	// For bigger than small, swap the location of things.
+	
 	@media (min-width: get_mediaQuery("med"))
 	{
 		padding-top: $defaults-story-hero-aspectRatio + 5%;
 
 		> .module.picture
 		{
-			position: absolute; top: 2.5%;
+			position: absolute; top: 2.5%; width: 100%;
 		}
 
 		> .module.summary
@@ -68,7 +69,25 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 
 		> .m_list
 		{
-			float:right; width: 30%;
+			float:right; width: 30%; padding-left: 2%;
+			margin-top:0;
+		}
+	}
+	@media (max-width: get_mediaQuery("med"))
+	{
+		> .module.picture
+		{
+			width: 100%;
+		}
+
+		> .module.summary
+		{
+			width: 100%;
+		}
+
+		> .m_list
+		{
+			width: 100%;
 		}
 	}
 

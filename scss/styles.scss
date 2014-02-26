@@ -7,3 +7,10 @@
 @import "../bower_components/SassySMACSS/modules/navicon";
 @import "../bower_components/SassySMACSS/modules/post_preview";
 @import "modules/story";  
+@import "modules/summary";  
+
+
+.nav
+{
+	float:right;
+}

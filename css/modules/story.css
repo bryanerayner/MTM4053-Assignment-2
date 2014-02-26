@@ -1,46 +1,93 @@
+/* line 24, ../../bower_components/SassySMACSS/mixins/_layout.scss */
 .story:before,
 .story:after {
   content: "";
-  display: table; }
+  display: table;
+}
 
+/* line 28, ../../bower_components/SassySMACSS/mixins/_layout.scss */
 .story:after {
-  clear: both; }
+  clear: both;
+}
 
+/* line 31, ../../bower_components/SassySMACSS/mixins/_layout.scss */
 .story {
   zoom: 1;
-  /* For IE 6/7 (trigger hasLayout) */ }
+  /* For IE 6/7 (trigger hasLayout) */
+}
 
+/* line 6, ../../scss/modules/story.scss */
 .story {
   width: 100%;
-  position: relative; }
-  .story > .m_list {
-    list-style: disc;
-    margin-top: 3%;
-    padding-left: 7.5%; }
+  position: relative;
+}
+/* line 11, ../../scss/modules/story.scss */
+.story > .m_list {
+  list-style: disc;
+  margin-top: 3%;
+  padding-left: 7.5%;
+}
+/* line 27, ../../scss/modules/story.scss */
+.story > .module.picture {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  /* line 33, ../../scss/modules/story.scss */
   .story > .module.picture {
-    width: 100%;
-    margin: 0 auto; }
-  @media (min-width: 320px) and (max-width: 640px) {
-    .story > .module.picture {
-      width: 30%;
-      float: left; }
-    .story > .module.summary {
-      width: 60%;
-      float: right; } }
+    width: 30%;
+    float: left;
+  }
+  /* line 37, ../../scss/modules/story.scss */
+  .story > .module.summary {
+    width: 60%;
+    float: right;
+  }
+}
 
+/* line 47, ../../scss/modules/story.scss */
 .story.story-hero {
-  padding: 0; }
+  padding: 0;
+}
+/* line 50, ../../scss/modules/story.scss */
+.story.story-hero > .m_list {
+  list-style: none;
+}
+@media (min-width: 640px) {
+  /* line 47, ../../scss/modules/story.scss */
+  .story.story-hero {
+    padding-top: 59.19922%;
+  }
+  /* line 61, ../../scss/modules/story.scss */
+  .story.story-hero > .module.picture {
+    position: absolute;
+    top: 2.5%;
+    width: 100%;
+  }
+  /* line 66, ../../scss/modules/story.scss */
+  .story.story-hero > .module.summary {
+    width: 60%;
+    float: left;
+  }
+  /* line 71, ../../scss/modules/story.scss */
   .story.story-hero > .m_list {
-    list-style: none; }
-  @media (min-width: 640px) {
-    .story.story-hero {
-      padding-top: 59.19922%; }
-      .story.story-hero > .module.picture {
-        position: absolute;
-        top: 2.5%; }
-      .story.story-hero > .module.summary {
-        width: 60%;
-        float: left; }
-      .story.story-hero > .m_list {
-        float: right;
-        width: 30%; } }
+    float: right;
+    width: 30%;
+    padding-left: 2%;
+    margin-top: 0;
+  }
+}
+@media (max-width: 640px) {
+  /* line 79, ../../scss/modules/story.scss */
+  .story.story-hero > .module.picture {
+    width: 100%;
+  }
+  /* line 84, ../../scss/modules/story.scss */
+  .story.story-hero > .module.summary {
+    width: 100%;
+  }
+  /* line 89, ../../scss/modules/story.scss */
+  .story.story-hero > .m_list {
+    width: 100%;
+  }
+}

@@ -143,9 +143,32 @@
 		<script type="text/javascript" src = "bower_components/SassySMACSS/lib/collapsible.js"></script>
 		<script type="text/javascript" src = "bower_components/SassySMACSS/lib/navicon.js"></script>
 		<script>
+		var $window = $(window);
+
+			function windowOnResize()
+			{
+				var width = $window.width();
+				var isCollapsibleActive = "is-collapsible-active";
+				var collapsible = $(".l_topbar .collapsible");
+				if (width < 640)
+				{
+					collapsible.addClass(isCollapsibleActive);
+				}else
+				{
+					collapsible.removeClass(isCollapsibleActive);
+				}
+			}
+
+
 			Zepto(function($){
 			  Sassy.collapsible();
 			  Sassy.navicon();
+
+			  $window.on("resize", function(e){
+			  	windowOnResize(e);
+			  } );
+
+			  windowOnResize();
 			});
 		</script>
 	</body>
