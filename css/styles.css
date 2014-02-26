@@ -1007,7 +1007,7 @@ ul {
       float: left;
       margin-right: 1em; }
     .story > .module.summary, .story > .m_list {
-      width: 60%;
+      width: 70%;
       float: left; } }
 
 .story.story-hero {
@@ -1023,8 +1023,12 @@ ul {
         top: 2.5%;
         width: 100%; }
       .story.story-hero > .module.summary {
-        width: 60%;
-        float: left; }
+        position: absolute;
+        width: 100%;
+        padding-right: 30%;
+        bottom: 2em;
+        z-index: -1;
+        min-height: 12em; }
       .story.story-hero > .m_list {
         float: right;
         width: 30%;
@@ -1041,6 +1045,8 @@ ul {
 .story.story-hero > .m_list {
   background-color: #4c575d;
   color: #efefef; }
+.story.story-hero > .module.summary {
+  background-color: #ebebeb; }
 
 .summary {
   padding: 0% .83%; }

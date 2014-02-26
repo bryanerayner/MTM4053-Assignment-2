@@ -35,7 +35,7 @@
 		}
 		> .module.summary, 	> .m_list
 		{
-			width: 60%; float:left; 
+			width: 70%; float:left; 
 		}
 	}
 }
@@ -65,7 +65,12 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 
 		> .module.summary
 		{
-			width: 60%; float:left;
+			position: absolute;
+			width: 100%;
+			padding-right: 30%;
+			bottom: 2em;
+			z-index: -1;
+			min-height: 12em;
 		}
 
 		> .m_list
@@ -101,4 +106,9 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 		background-color:#4c575d;
 		color:#efefef;
 	}
+	> .module.summary
+	{
+		background-color: #ebebeb;
+	}
+
 }
