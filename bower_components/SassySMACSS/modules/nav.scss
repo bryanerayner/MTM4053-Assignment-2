@@ -25,7 +25,7 @@ $defaults-nav-secondary-float:$defaults-float !default;
 
 .nav
 {
-	float:$defaults-nav-float; display: table-row; width: 100%;
+	float:$defaults-nav-float; display: block; 
 
 	> .m_navItem, > .m_navGroup
 	{

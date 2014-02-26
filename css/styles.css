@@ -1108,8 +1108,7 @@ ul {
 /* line 27, ../bower_components/SassySMACSS/modules/nav.scss */
 .nav {
   float: left;
-  display: table-row;
-  width: 100%;
+  display: block;
 }
 /* line 31, ../bower_components/SassySMACSS/modules/nav.scss */
 .nav > .m_navItem, .nav > .m_navGroup {
