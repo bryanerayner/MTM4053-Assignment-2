@@ -1,0 +1,64 @@
+@import "../../bower_components/SassySMACSS/mixins/mediaQueries";
+@import "../../bower_components/SassySMACSS/mixins/layout";
+
+
+.story
+{
+	@extend %clearfix;
+	width:100%; position: relative; 
+
+	> .m_list
+	{
+		list-style: disc;
+		padding-left: 7.5%;
+		> .m_listItem
+		{
+
+		}
+	}
+
+
+	> .module.summary
+	{
+
+	}
+
+	> .module.picture
+	{
+		width:100%; margin: 0 auto;
+	}
+}
+
+
+$defaults-story-hero-aspectRatio: percentage(555/1024) !default;
+
+.story.story-hero
+{
+	padding: 0;
+	> .m_list
+	{
+		list-style: none;
+	}
+
+	// For bigger than medium, swap the location of things.
+	@media (min-width: get_mediaQuery("med"))
+	{
+		padding-top: $defaults-story-hero-aspectRatio + 5%;
+
+		> .module.picture
+		{
+			position: absolute; top: 2.5%;
+		}
+
+		> .module.summary
+		{
+			width: 60%; float:left;
+		}
+
+		> .m_list
+		{
+			float:right; width: 30%;
+		}
+	}
+
+}

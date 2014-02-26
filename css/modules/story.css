@@ -1,0 +1,40 @@
+.story:before,
+.story:after {
+  content: "";
+  display: table; }
+
+.story:after {
+  clear: both; }
+
+.story {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */ }
+
+.story {
+  width: 100%;
+  position: relative; }
+  .story > .m_list {
+    list-style: disc;
+    padding-left: 7.5%; }
+  .story > .module.picture {
+    width: 100%;
+    margin: 0 auto; }
+
+.story.story-hero {
+  padding: 0; }
+  .story.story-hero > .m_list {
+    list-style: none; }
+  @media (min-width: 640px) {
+    .story.story-hero {
+      padding-top: 59.19922%; }
+      .story.story-hero > .module.picture {
+        position: absolute;
+        top: 2.5%; }
+      .story.story-hero > .module.summary {
+        width: 60%;
+        float: left; }
+      .story.story-hero > .m_list {
+        float: right;
+        width: 30%; } }
+
+/*# sourceMappingURL=story.css.map */

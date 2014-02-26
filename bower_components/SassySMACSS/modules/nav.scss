@@ -1,0 +1,49 @@
+@import "../mixins/layout";
+@import "../mixins/mediaQueries";
+
+$defaults-float: left !default;
+
+$defaults-nav--m_navItem-float: $defaults-float !default;
+$defaults-nav-float:$defaults-float !default;
+$defaults-nav-primary-float:$defaults-float !default;
+$defaults-nav-secondary-float:$defaults-float !default;
+
+@mixin nav--m_navItem
+{
+	display:block; float:$defaults-nav--m_navItem-float; width:100%;
+
+	@include mediaQuery_aboveSm()
+	{
+		width:auto;
+	}
+}
+
+
+
+
+.nav
+{
+	float:$defaults-nav-float;
+
+	> .m_navItem, > .m_navGroup
+	{
+		@include nav--m_navItem();
+	}
+
+	.m_navGroup
+	{
+		> .m_navItem, .m_navGroupLabel
+		{
+			@include nav--m_navItem();
+		}
+	}
+
+	&.nav-primary
+	{
+
+	}
+	&.nav-secondary
+	{
+		
+	}
+}

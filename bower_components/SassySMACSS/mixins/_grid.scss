@@ -1,0 +1,114 @@
+@import "mediaQueries";
+@import "layout";
+
+$defaults-grid_cell-cellClassName: l_grid_cell !default;
+$defaults-grid_cell-columnClassName: l_grid_container !default;
+$defaults-grid_cell-padding: 1.5% !default;
+
+$defaults-float: left !default;
+
+// This mixin generates a cell, based on a column and contianer, in a SMACSS way. 
+// If $useColumnNumber is set to true, this mixin will generate a number as well
+// as the column name.
+//
+@mixin grid_cell($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName, $useFloat:false, $cellPadding: 3%)
+{
+	$numberPrefix:"";
+	@if $useColumnNumber == true
+	{
+		$numberPrefix:-#{$columnWidth};
+	}
+
+	.#{$columnClassName}#{$numberPrefix}
+	{
+		> .#{$cellClassName}-#{$cellWidth}
+		{
+			@if ($useFloat)
+			{
+				float: $defaults-float;	
+			}
+			width: percentage($cellWidth/$columnWidth); 
+			@if ($cellWidth != $columnWidth)
+			{
+				padding-left: $cellPadding; padding-right: $cellPadding;
+			}
+		}
+	}
+
+
+}
+
+// Desugars to grid_cell, only appending a $modeName to the end of the name.
+// $cellWidth: The width of the cell
+// $columnWidth: The width of the column
+// $modeName: The name to prefix onto grid_cell
+// $cellClassName: The class name for each grid_cell
+// $columnClassName: The class name for each grid_column
+@mixin grid_cell-mode($cellWidth, $columnWidth, $modeName, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName, $cellPadding:$defaults-grid_cell-padding)
+{
+	@include grid_cell($cellWidth, $columnWidth, $useColumnNumber, #{$cellClassName}-#{$modeName}, $columnClassName, false, $cellPadding);
+}
+
+@mixin grid_cell-sm($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName, $cellPadding:$defaults-grid_cell-padding)
+{
+	@include grid_cell-mode($cellWidth, $columnWidth, sm, $useColumnNumber, $cellClassName, $columnClassName, false, $cellPadding);
+}
+
+@mixin grid_cell-med($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName, $cellPadding:$defaults-grid_cell-padding)
+{
+	@include grid_cell-mode($cellWidth, $columnWidth, med, $useColumnNumber, $cellClassName, $columnClassName, false, $cellPadding);
+}
+
+@mixin grid_cell-lg($cellWidth, $columnWidth, $useColumnNumber:false, $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName, $cellPadding:$defaults-grid_cell-padding)
+{
+	@include grid_cell-mode($cellWidth, $columnWidth, lg, $useColumnNumber, $cellClassName, $columnClassName, false, $cellPadding);
+}
+
+
+@mixin create_grid($columnWidth:12, $useColumnNumber:false, $mediaQueries:get_mediaQueries(), $cellClassName:$defaults-grid_cell-cellClassName, $columnClassName:$defaults-grid_cell-columnClassName, $cellPadding: $defaults-grid_cell-padding)
+{
+	@each $mediaQuery in $mediaQueries
+	{
+		@for $i from 1 through $columnWidth
+		{
+			
+			// Check of the media query exists, and it's the smallest. We want the smallest to be first in the cascade
+			@if ($mediaQuery == get_mediaQuery_name("smallest"))
+			{
+				@include grid_cell-mode($i, $columnWidth, $mediaQuery,$useColumnNumber, $cellClassName, $columnClassName,  $cellPadding);
+			}
+			@if (get_mediaQuery($mediaQuery))
+			{
+				@media(min-width:get_mediaQuery($mediaQuery))
+				{
+					@include grid_cell-mode($i, $columnWidth, $mediaQuery, $useColumnNumber, $cellClassName, $columnClassName, $cellPadding);	
+				}				
+			}
+			
+		}
+	}
+	
+	$numberPrefix:"";
+	@if $useColumnNumber == true
+	{
+		$numberPrefix:-#{$columnWidth};
+	}
+	
+	.#{$columnClassName}#{$numberPrefix}
+	{
+		width:100%; @extend %clearfix;
+
+		> [class*=#{$cellClassName}]
+		{
+			float: $defaults-float;
+		}
+		> [class*=#{$cellClassName}]:last-child
+		{
+			float: float_inverse($defaults-float);
+		}
+		> [class*=#{$cellClassName}][class$="-last"]
+		{
+			float: $defaults-float;
+		}		
+	}
+}

@@ -1,0 +1,48 @@
+{
+  "name": "SassySMACSS",
+  "version": "0.0.7",
+  "homepage": "https://github.com/bryanerayner/SassySMACSS",
+  "authors": [
+    "Bryan Rayner <bryanerayner@gmail.com>"
+  ],
+  "description": "Commonly used modules, written in SASS following the SMACSS style of naming. Not intended to be a framework, but a collection of commonly needed SASS partials and modules.",
+  "main": "sassySmacss.scss",
+  "keywords": [
+    "SMACSS",
+    "Grid",
+    "Layout",
+    "SASS",
+    "Starter"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "css/node_modules",
+    "css/tests",
+    "node_modules",
+    "Gruntfile.js",
+    ".DS_Store",
+    ".gitignore",
+    ".git/",
+    "package.json",
+    ".sass-cache/",
+    "bower.json",
+    "tests/",
+    "lib/zepto"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bryanerayner/SassySMACSS.git"
+  },
+  "dependencies": {
+    "zepto": ">0.0.0"
+  },
+  "_release": "0.0.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.7",
+    "commit": "9f68021bfe00144ebd9c8443df4bdec9e8e948f1"
+  },
+  "_source": "git://github.com/bryanerayner/SassySMACSS.git",
+  "_target": ">=0.0.7",
+  "_originalSource": "SassySMACSS"
+}
