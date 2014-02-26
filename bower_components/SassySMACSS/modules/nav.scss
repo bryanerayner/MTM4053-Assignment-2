@@ -16,7 +16,7 @@ $defaults-nav-secondary-float:$defaults-float !default;
 
 	@include mediaQuery_aboveSm()
 	{
-		width:auto; padding: 1.5em 4%; display: table-cell;
+		width:auto; padding: 1.5em 4%; display: inline-block;
 	}
 }
 
