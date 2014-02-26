@@ -704,6 +704,9 @@ ul {
   width: 100%; }
   .l_grid_container > [class*=l_grid_cell] {
     float: left; }
+  .l_grid_container > [class*=l_grid_cell-wide] {
+    padding-left: 0;
+    padding-right: 0; }
   .l_grid_container > [class*=l_grid_cell]:last-child {
     float: right; }
   .l_grid_container > [class*=l_grid_cell][class$="-last"] {
@@ -720,6 +723,10 @@ ul {
   border: 1px solid;
   padding: 18px 30px 0;
   width: 100%; }
+
+.l_footer {
+  width: 100%;
+  padding: 1em 1.5em 0; }
 
 .l_colourblock {
   width: 100%; }
@@ -781,21 +788,34 @@ ul {
   /* For IE 6/7 (trigger hasLayout) */ }
 
 .nav {
-  float: left; }
+  float: left;
+  display: table-row; }
   .nav > .m_navItem, .nav > .m_navGroup {
     display: block;
     float: left;
     width: 100%;
     width: auto;
+    padding: 4%;
+    display: table-cell;
     width: auto;
-    width: auto; }
+    padding: 4%;
+    display: table-cell;
+    width: auto;
+    padding: 4%;
+    display: table-cell; }
   .nav .m_navGroup > .m_navItem, .nav .m_navGroup .m_navGroupLabel {
     display: block;
     float: left;
     width: 100%;
     width: auto;
+    padding: 4%;
+    display: table-cell;
     width: auto;
-    width: auto; }
+    padding: 4%;
+    display: table-cell;
+    width: auto;
+    padding: 4%;
+    display: table-cell; }
 
 .navicon {
   display: inline-block;
@@ -950,10 +970,18 @@ ul {
   position: relative; }
   .story > .m_list {
     list-style: disc;
+    margin-top: 3%;
     padding-left: 7.5%; }
   .story > .module.picture {
     width: 100%;
     margin: 0 auto; }
+  @media (min-width: 320px) and (max-width: 640px) {
+    .story > .module.picture {
+      width: 30%;
+      float: left; }
+    .story > .module.summary {
+      width: 60%;
+      float: right; } }
 
 .story.story-hero {
   padding: 0; }

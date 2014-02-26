@@ -102,6 +102,10 @@ $defaults-float: left !default;
 		{
 			float: $defaults-float;
 		}
+		> [class*=#{$cellClassName}-wide]
+		{
+			padding-left:0; padding-right:0;
+		}
 		> [class*=#{$cellClassName}]:last-child
 		{
 			float: float_inverse($defaults-float);

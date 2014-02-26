@@ -14,7 +14,7 @@ $defaults-nav-secondary-float:$defaults-float !default;
 
 	@include mediaQuery_aboveSm()
 	{
-		width:auto;
+		width:auto; padding: 4%; display: table-cell;
 	}
 }
 
@@ -23,7 +23,7 @@ $defaults-nav-secondary-float:$defaults-float !default;
 
 .nav
 {
-	float:$defaults-nav-float;
+	float:$defaults-nav-float; display: table-row;
 
 	> .m_navItem, > .m_navGroup
 	{

@@ -9,7 +9,7 @@
 
 	> .m_list
 	{
-		list-style: disc;
+		list-style: disc; margin-top: 3%;
 		padding-left: 7.5%;
 		> .m_listItem
 		{
@@ -26,6 +26,17 @@
 	> .module.picture
 	{
 		width:100%; margin: 0 auto;
+	}
+	@media (min-width: get_mediaQuery("sm")) and (max-width: get_mediaQuery("med"))
+	{
+		> .module.picture
+		{
+			width: 30%; float:left;
+		}
+		> .module.summary
+		{
+			width: 60%; float:right;
+		}
 	}
 }
 

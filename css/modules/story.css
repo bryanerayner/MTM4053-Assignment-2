@@ -15,10 +15,18 @@
   position: relative; }
   .story > .m_list {
     list-style: disc;
+    margin-top: 3%;
     padding-left: 7.5%; }
   .story > .module.picture {
     width: 100%;
     margin: 0 auto; }
+  @media (min-width: 320px) and (max-width: 640px) {
+    .story > .module.picture {
+      width: 30%;
+      float: left; }
+    .story > .module.summary {
+      width: 60%;
+      float: right; } }
 
 .story.story-hero {
   padding: 0; }
