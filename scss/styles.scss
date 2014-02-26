@@ -8,9 +8,17 @@
 @import "../bower_components/SassySMACSS/modules/post_preview";
 @import "modules/story";  
 @import "modules/summary";  
-
+ 
 
 .nav
 {
 	float:right;   
+}   
+
+ 
+
+.l_topbar
+{
+	background-color:#ebebeb;
+	color:#55646c; padding-bottom: .5em;
 }
