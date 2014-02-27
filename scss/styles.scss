@@ -6,9 +6,10 @@
 @import "../bower_components/SassySMACSS/modules/nav"; 
 @import "../bower_components/SassySMACSS/modules/navicon";
 @import "../bower_components/SassySMACSS/modules/post_preview";
+@import "modules/icn";  
 @import "modules/story";  
 @import "modules/summary";  
-
+ 
 
 
 .nav
@@ -18,7 +19,7 @@
 	{
 		a
 		{
-
+ 
 			&:hover
 			{
 				background-color:#464646;
@@ -34,15 +35,28 @@
 }     
 
 
-	
+	 
 
 .l_topbar
 {
 	background-color:#ebebeb;
-	color:#505f66; padding-bottom: .5em;
+	color:#212121; padding-bottom: .5em;
+
+	h1
+	{
+		float:left; font-size:1.5em;
+		margin: .25em 0;
+	}
+
+	h1, a:link, a:visited
+	{
+		color:#212121;		
+	}
 }
 
 .l_footer
 {
 	background-color:#ebebeb;
 }
+
+

@@ -1,15 +1,16 @@
 .story > .m_list > .m_listItem a {
   text-decoration: none; }
 
-.story:before,
-.story:after {
+.story:before, .story > .m_list:before,
+.story:after,
+.story > .m_list:after {
   content: "";
   display: table; }
 
-.story:after {
+.story:after, .story > .m_list:after {
   clear: both; }
 
-.story {
+.story, .story > .m_list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -20,8 +21,13 @@
     list-style: disc;
     padding-top: 3%;
     padding-left: 7.5%; }
-    .story > .m_list > .m_listItem a {
-      color: #fff; }
+    .story > .m_list > .m_listItem {
+      float: left;
+      width: 100%; }
+      .story > .m_list > .m_listItem > .module.icn {
+        margin-right: 1em; }
+      .story > .m_list > .m_listItem a {
+        color: #fff; }
   .story > .module.picture {
     width: 100%;
     margin: 0 auto; }
@@ -31,8 +37,8 @@
       float: left;
       margin-right: 1em; }
     .story > .module.summary, .story > .m_list {
-      width: 70%;
-      float: left; } }
+      width: 66%;
+      float: right; } }
 
 .story.story-hero {
   padding: 0;
@@ -50,9 +56,9 @@
         position: absolute;
         width: 100%;
         padding-right: 30%;
-        bottom: 2em;
+        top: inherit;
         z-index: -1;
-        min-height: 12em; }
+        min-height: 14.5em; }
       .story.story-hero > .m_list {
         float: right;
         width: 30%;

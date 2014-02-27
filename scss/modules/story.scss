@@ -12,8 +12,15 @@
 	{
 		list-style: disc; padding-top: 3%;
 		padding-left: 7.5%;
+		@extend %clearfix;
 		> .m_listItem
 		{
+
+			float:left; width: 100%;
+			> .module.icn
+			{
+				margin-right: 1em;
+			}
 			a
 			{
 				@extend %plainAnchor;
@@ -43,7 +50,7 @@
 		}
 		> .module.summary, 	> .m_list
 		{
-			width: 70%; float:left; 
+			width: 66%; float:right; 
 		}
 	}
 }
@@ -76,9 +83,9 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 			position: absolute;
 			width: 100%;
 			padding-right: 30%;
-			bottom: 2em;
+			top: inherit;
 			z-index: -1;
-			min-height: 12em;
+			min-height: 14.5em;
 		}
 
 		> .m_list

@@ -367,37 +367,39 @@ ul {
   /* Firefox, other Gecko */
   box-sizing: border-box; }
 
-.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before,
+.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before, .story > .m_list:before,
 .l_constrained:after,
 .l_grid_container:after,
 .l_title:after,
 .l_colourblock:after,
 .collapsible:after,
-.story:after {
+.story:after,
+.story > .m_list:after {
   content: "";
   display: table; }
 
-.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after {
+.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after, .story > .m_list:after {
   clear: both; }
 
-.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story {
+.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story, .story > .m_list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
-.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before,
+.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before, .story > .m_list:before,
 .l_constrained:after,
 .l_grid_container:after,
 .l_title:after,
 .l_colourblock:after,
 .collapsible:after,
-.story:after {
+.story:after,
+.story > .m_list:after {
   content: "";
   display: table; }
 
-.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after {
+.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after, .story > .m_list:after {
   clear: both; }
 
-.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story {
+.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story, .story > .m_list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -746,20 +748,21 @@ ul {
   right: 0;
   bottom: 0; }
 
-.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before,
+.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before, .story > .m_list:before,
 .l_constrained:after,
 .l_grid_container:after,
 .l_title:after,
 .l_colourblock:after,
 .collapsible:after,
-.story:after {
+.story:after,
+.story > .m_list:after {
   content: "";
   display: table; }
 
-.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after {
+.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after, .story > .m_list:after {
   clear: both; }
 
-.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story {
+.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story, .story > .m_list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -774,20 +777,21 @@ ul {
 .collapsible:not([class*=is-collapsible-active]) > .m_collapseButton {
   display: none; }
 
-.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before,
+.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before, .story > .m_list:before,
 .l_constrained:after,
 .l_grid_container:after,
 .l_title:after,
 .l_colourblock:after,
 .collapsible:after,
-.story:after {
+.story:after,
+.story > .m_list:after {
   content: "";
   display: table; }
 
-.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after {
+.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after, .story > .m_list:after {
   clear: both; }
 
-.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story {
+.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story, .story > .m_list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -810,19 +814,25 @@ ul {
         width: auto;
         min-width: 100px;
         padding: 1.5em 4%;
-        display: block; } }
+        display: block; }
+        .nav > .m_navItem a, .nav > .m_navGroup a {
+          width: 100%; } }
     @media (min-width: 980px) {
       .nav > .m_navItem, .nav > .m_navGroup {
         width: auto;
         min-width: 100px;
         padding: 1.5em 4%;
-        display: block; } }
+        display: block; }
+        .nav > .m_navItem a, .nav > .m_navGroup a {
+          width: 100%; } }
     @media (min-width: 1024px) {
       .nav > .m_navItem, .nav > .m_navGroup {
         width: auto;
         min-width: 100px;
         padding: 1.5em 4%;
-        display: block; } }
+        display: block; }
+        .nav > .m_navItem a, .nav > .m_navGroup a {
+          width: 100%; } }
   .nav .m_navGroup > .m_navItem, .nav .m_navGroup .m_navGroupLabel {
     display: block;
     float: left;
@@ -833,19 +843,25 @@ ul {
         width: auto;
         min-width: 100px;
         padding: 1.5em 4%;
-        display: block; } }
+        display: block; }
+        .nav .m_navGroup > .m_navItem a, .nav .m_navGroup .m_navGroupLabel a {
+          width: 100%; } }
     @media (min-width: 980px) {
       .nav .m_navGroup > .m_navItem, .nav .m_navGroup .m_navGroupLabel {
         width: auto;
         min-width: 100px;
         padding: 1.5em 4%;
-        display: block; } }
+        display: block; }
+        .nav .m_navGroup > .m_navItem a, .nav .m_navGroup .m_navGroupLabel a {
+          width: 100%; } }
     @media (min-width: 1024px) {
       .nav .m_navGroup > .m_navItem, .nav .m_navGroup .m_navGroupLabel {
         width: auto;
         min-width: 100px;
         padding: 1.5em 4%;
-        display: block; } }
+        display: block; }
+        .nav .m_navGroup > .m_navItem a, .nav .m_navGroup .m_navGroupLabel a {
+          width: 100%; } }
 
 .navicon {
   display: inline-block;
@@ -937,20 +953,21 @@ ul {
     .navicon.is-open.navicon-close > .m_icon:before {
       transform: rotate(-45deg); }
 
-.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before,
+.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before, .story > .m_list:before,
 .l_constrained:after,
 .l_grid_container:after,
 .l_title:after,
 .l_colourblock:after,
 .collapsible:after,
-.story:after {
+.story:after,
+.story > .m_list:after {
   content: "";
   display: table; }
 
-.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after {
+.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after, .story > .m_list:after {
   clear: both; }
 
-.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story {
+.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story, .story > .m_list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -978,23 +995,36 @@ ul {
   width: 64%;
   float: right; }
 
+.icn {
+  background-image: url("../assets/sprites.png");
+  width: 50px;
+  height: 50px;
+  float: left; }
+  .icn.icn-phone {
+    background-position: 0px 0px; }
+  .icn.icn-email {
+    background-position: 0px -60px; }
+  .icn.icn-mapPin {
+    background-position: 0px -130px; }
+
 .nav > .m_navItem > a, .nav > .m_navGroup > a, .nav .m_navGroup > .m_navItem > a, .nav .m_navGroup .m_navGroupLabel > a, .story > .m_list > .m_listItem a {
   text-decoration: none; }
 
-.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before,
+.l_constrained:before, .l_grid_container:before, .l_title:before, .l_colourblock:before, .collapsible:before, .story:before, .story > .m_list:before,
 .l_constrained:after,
 .l_grid_container:after,
 .l_title:after,
 .l_colourblock:after,
 .collapsible:after,
-.story:after {
+.story:after,
+.story > .m_list:after {
   content: "";
   display: table; }
 
-.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after {
+.l_constrained:after, .l_grid_container:after, .l_title:after, .l_colourblock:after, .collapsible:after, .story:after, .story > .m_list:after {
   clear: both; }
 
-.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story {
+.l_constrained, .l_grid_container, .l_title, .l_colourblock, .collapsible, .story, .story > .m_list {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -1005,8 +1035,13 @@ ul {
     list-style: disc;
     padding-top: 3%;
     padding-left: 7.5%; }
-    .story > .m_list > .m_listItem a {
-      color: #fff; }
+    .story > .m_list > .m_listItem {
+      float: left;
+      width: 100%; }
+      .story > .m_list > .m_listItem > .module.icn {
+        margin-right: 1em; }
+      .story > .m_list > .m_listItem a {
+        color: #fff; }
   .story > .module.picture {
     width: 100%;
     margin: 0 auto; }
@@ -1016,8 +1051,8 @@ ul {
       float: left;
       margin-right: 1em; }
     .story > .module.summary, .story > .m_list {
-      width: 70%;
-      float: left; } }
+      width: 66%;
+      float: right; } }
 
 .story.story-hero {
   padding: 0;
@@ -1035,9 +1070,9 @@ ul {
         position: absolute;
         width: 100%;
         padding-right: 30%;
-        bottom: 2em;
+        top: inherit;
         z-index: -1;
-        min-height: 12em; }
+        min-height: 14.5em; }
       .story.story-hero > .m_list {
         float: right;
         width: 30%;
@@ -1071,8 +1106,14 @@ ul {
 
 .l_topbar {
   background-color: #ebebeb;
-  color: #505f66;
+  color: #212121;
   padding-bottom: .5em; }
+  .l_topbar h1 {
+    float: left;
+    font-size: 1.5em;
+    margin: .25em 0; }
+  .l_topbar h1, .l_topbar a:link, .l_topbar a:visited {
+    color: #212121; }
 
 .l_footer {
   background-color: #ebebeb; }
