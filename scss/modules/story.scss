@@ -1,4 +1,5 @@
 @import "../../bower_components/SassySMACSS/mixins/mediaQueries";
+@import "../../bower_components/SassySMACSS/mixins/plainAnchor";
 @import "../../bower_components/SassySMACSS/mixins/layout";
 
 
@@ -13,7 +14,14 @@
 		padding-left: 7.5%;
 		> .m_listItem
 		{
+			a
+			{
+				@extend %plainAnchor;
+				color:#fff;
+				&:link{
 
+				}
+			}
 		}
 	}
 

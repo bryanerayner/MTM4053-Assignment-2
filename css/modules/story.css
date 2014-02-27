@@ -1,3 +1,6 @@
+.story > .m_list > .m_listItem a {
+  text-decoration: none; }
+
 .story:before,
 .story:after {
   content: "";
@@ -17,6 +20,8 @@
     list-style: disc;
     padding-top: 3%;
     padding-left: 7.5%; }
+    .story > .m_list > .m_listItem a {
+      color: #fff; }
   .story > .module.picture {
     width: 100%;
     margin: 0 auto; }

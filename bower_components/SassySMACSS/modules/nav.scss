@@ -1,5 +1,6 @@
 @import "../mixins/layout";
 @import "../mixins/mediaQueries";
+@import "../mixins/plainAnchor";
 
 $defaults-float: left !default;
 
@@ -8,6 +9,29 @@ $defaults-nav-float:$defaults-float !default;
 $defaults-nav-primary-float:$defaults-float !default;
 $defaults-nav-secondary-float:$defaults-float !default;
 
+
+%navAnchor
+{
+	padding: .5em;
+	&:link
+	{
+
+	}
+	&:visited
+	{
+		
+	}
+	&:hover
+	{
+		
+	}
+	&:active
+	{
+		
+	}
+}
+
+
 @mixin nav--m_navItem
 {
 	display:block; float:$defaults-nav--m_navItem-float; width:100%;
@@ -15,13 +39,13 @@ $defaults-nav-secondary-float:$defaults-float !default;
 	padding: .4em;
 	> a
 	{
-		text-decoration: none;
-		color:#484848;
+		@extend %plainAnchor;
+		@extend %navAnchor;
 	}
 
 	@include mediaQuery_aboveSm()
 	{
-		width:auto; width:100px; padding: 1.5em 4%; display: block;
+		width:auto; min-width:100px; padding: 1.5em 4%; display: block;
 	}
 }
 
@@ -30,7 +54,7 @@ $defaults-nav-secondary-float:$defaults-float !default;
 
 .nav
 {
-	float:$defaults-nav-float; display: block; 
+	float:$defaults-nav-float; display: block;
 
 	> .m_navItem, > .m_navGroup
 	{
