@@ -1,0 +1,97 @@
+<!doctype>
+<html>
+	<head>
+		<title>Ottawa Graffiti Museum</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<header class="l_topbar">
+			<div class="l_constrained l_grid_container collapsible is-collapsible-active is-collapsed">
+				<div class="logo l_grid_cell-sm-8 l_grid_cell-med-6 l_grid_cell-wide l_grid_container">
+					<img class = "l_left l_grid_cell-sm-2 l_grid_cell-med-3 l_grid_cell-lg-2" src="assets/logo.png" alt="">
+					<h1 class = "l_right l_grid_cell-sm-10 l_grid_cell-med-9  l_grid_cell-lg-10">Ottawa Graffiti Museum</h1>
+				</div>
+				<div class="m_collapseButton l_right navicon">
+						<div class = "m_icon"></div>
+					</div>
+				<nav class="l_grid_cell-sm-12 l_grid_cell-med-6 l_grid_container l_right">
+					
+					<ul class="nav l_grid_cell-sm-12 l_grid_cell-lg-12 nav-primary l_right">
+						<li class="m_collapsible_target m_navItem"><a href="">About</a></li>
+						<li class="m_collapsible_target m_navItem"><a href="">Visit Us</a></li>
+						<li class="m_collapsible_target m_navItem"><a href="">Gallery</a></li>
+						<li class="m_collapsible_target m_navItem"><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="l_constrained l_grid_container">
+			<form action = "" class="l_grid_cell-centered-sm l_grid_cell-sm-11 l_grid_cell-centered-med l_grid_cell-med-8 form">
+
+				<div class="l_grid_container">
+					<div class="l_grid_cell-sm-4 l_grid_cell-med-2">
+						<div class="icn icn-phone"></div>
+					</div>
+					<div class="l_grid_cell-sm-12 l_grid_cell-med-10 m_inputGroup">
+						<label class = "m_label" for = "phone">Contact Phone: </label>
+						<input class = "m_input" id = "phone" placeholder = "555-555-5555" >
+					</div>
+					<div class="l_clear l_grid_cell-sm-4 l_grid_cell-med-2">
+						<div class="icn icn-email"></div>
+					</div>
+					<div class="l_grid_cell-sm-12 l_grid_cell-med-10 m_inputGroup">
+						<label class = "m_label" for = "email">Contact Email: </label>
+						<input class = "m_input" id = "email" placeholder = "yourAddress@example.com" >
+					</div>
+					<div class="l_clear l_grid_cell-sm-12 l_grid_cell-med-10 l_grid_cell-push-med-2 m_inputGroup">
+						<label class = "m_label" for = "message">Message: </label>
+						<textarea class = "m_input" id = "message" placeholder = "555-555-5555" >
+						</textarea>
+					</div>
+				</div>
+			</form>
+			
+		</div>
+
+		<footer class = "l_footer">
+			<div class="l_constrained">
+				<p>&copy; 2014 Bryan Rayner</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src = "bower_components/zepto/zepto.min.js"></script>		
+		<script type="text/javascript" src = "bower_components/SassySMACSS/lib/collapsible.js"></script>
+		<script type="text/javascript" src = "bower_components/SassySMACSS/lib/navicon.js"></script>
+		<script>
+		var $window = $(window);
+
+			function windowOnResize()
+			{
+				var width = $window.width();
+				var isCollapsibleActive = "is-collapsible-active";
+				var collapsible = $(".l_topbar .collapsible");
+				if (width < 640)
+				{
+					collapsible.addClass(isCollapsibleActive);
+				}else
+				{
+					collapsible.removeClass(isCollapsibleActive);
+				}
+			}
+
+
+			Zepto(function($){
+			  Sassy.collapsible();
+			  Sassy.navicon();
+
+			  $window.on("resize", function(e){
+			  	windowOnResize(e);
+			  } );
+
+			  windowOnResize();
+			});
+		</script>
+	</body>
+</html>

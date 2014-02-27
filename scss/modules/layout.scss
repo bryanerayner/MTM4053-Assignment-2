@@ -1,0 +1,45 @@
+@import "../bower_components/SassySMACSS/mixins/mediaQueries";
+
+
+.l_clear
+{
+	clear:both;
+}
+
+
+
+
+$mediaQueries: get_mediaQueries();
+
+@each $mediaQuery in $mediaQueries
+{
+	@include mediaQuery_mobileFirst($mediaQuery)
+	{
+		@for $i from 1 through 12
+		{
+			.l_grid_cell-push-#{$mediaQuery}-#{$i}
+			{
+				left: percentage($i/12);
+			}
+		}
+		[class*=l_grid_cell].l_grid_cell-centered-#{$mediaQuery}
+		{
+			float:none;
+			&:last-child
+			{
+				float:none;
+			}
+
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.l_grid_container > [class*=l_grid_cell-push-#{$mediaQuery}]
+		{	
+			position: relative;
+			&:last-child
+			{
+				float:none;
+			}
+		}
+	}
+}

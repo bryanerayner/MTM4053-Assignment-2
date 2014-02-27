@@ -6,6 +6,8 @@
 @import "../bower_components/SassySMACSS/modules/nav"; 
 @import "../bower_components/SassySMACSS/modules/navicon";
 @import "../bower_components/SassySMACSS/modules/post_preview";
+@import "modules/layout";  
+@import "modules/form";  
 @import "modules/icn";  
 @import "modules/story";  
 @import "modules/summary";  
@@ -34,7 +36,11 @@
 	} 
 }     
 
-
+.form
+{
+	
+	background-color:#ebebeb;
+}
 	 
 
 .l_topbar
@@ -56,6 +62,7 @@
 
 .l_footer
 {
+	margin-top:2em;
 	background-color:#ebebeb;
 }
 

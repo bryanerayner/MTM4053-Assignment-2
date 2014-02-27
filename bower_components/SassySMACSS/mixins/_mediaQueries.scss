@@ -67,3 +67,22 @@ $defaults-media_queries-biggest: "desktop" !default;
 		}
 	}
 }
+
+
+@mixin mediaQuery_mobileFirst($mediaQuery:"sm")
+{
+	@if ($mediaQuery == get_mediaQuery_name("smallest"))
+	{
+		@content;
+	}
+	@if (get_mediaQuery($mediaQuery))
+	{
+		@media(min-width:get_mediaQuery($mediaQuery))
+		{
+			@content;
+		}				
+	}
+
+}
+
+			
