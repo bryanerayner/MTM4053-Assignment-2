@@ -38,13 +38,13 @@
 
 	}
 
-	> .module.picture
+	> .module.picture, .module.google_map
 	{
 		width:100%; margin: 0 auto;
 	}
 	@media (min-width: get_mediaQuery("sm")) and (max-width: get_mediaQuery("med"))
 	{
-		> .module.picture
+		> .module.picture, .module.google_map
 		{
 			width: 30%; float:left; margin-right: 1em;
 		}
@@ -73,7 +73,7 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 	{
 		padding-top: $defaults-story-hero-aspectRatio + 2%;
 
-		> .module.picture
+		> .module.picture, .module.google_map
 		{
 			position: absolute; top: 2.5%; width: 100%;
 		}
@@ -96,7 +96,7 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 	}
 	@media (max-width: get_mediaQuery("med"))
 	{
-		> .module.picture
+		> .module.picture, .module.google_map
 		{
 			width: 100%;
 		}
@@ -114,16 +114,3 @@ $defaults-story-hero-aspectRatio: percentage(555/1024) !default;
 
 }
 
-
-.story.story-hero
-{
-	> .m_list{
-		background-color:#4c575d;
-		color:#efefef;
-	}
-	> .module.summary
-	{
-		background-color: #ebebeb;
-	}
-
-}

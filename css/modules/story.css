@@ -28,11 +28,11 @@
         margin-right: 1em; }
       .story > .m_list > .m_listItem a {
         color: #fff; }
-  .story > .module.picture {
+  .story > .module.picture, .story .module.google_map {
     width: 100%;
     margin: 0 auto; }
   @media (min-width: 320px) and (max-width: 640px) {
-    .story > .module.picture {
+    .story > .module.picture, .story .module.google_map {
       width: 30%;
       float: left;
       margin-right: 1em; }
@@ -48,7 +48,7 @@
   @media (min-width: 640px) {
     .story.story-hero {
       padding-top: 56.19922%; }
-      .story.story-hero > .module.picture {
+      .story.story-hero > .module.picture, .story.story-hero .module.google_map {
         position: absolute;
         top: 2.5%;
         width: 100%; }
@@ -65,15 +65,9 @@
         padding-left: 2%;
         margin-top: 0; } }
   @media (max-width: 640px) {
-    .story.story-hero > .module.picture {
+    .story.story-hero > .module.picture, .story.story-hero .module.google_map {
       width: 100%; }
     .story.story-hero > .module.summary {
       width: 100%; }
     .story.story-hero > .m_list {
       width: 100%; } }
-
-.story.story-hero > .m_list {
-  background-color: #4c575d;
-  color: #efefef; }
-.story.story-hero > .module.summary {
-  background-color: #ebebeb; }

@@ -10,6 +10,7 @@
 @import "modules/form";  
 @import "modules/icn";  
 @import "modules/story";  
+@import "modules/google_map";  
 @import "modules/summary";  
  
 
@@ -35,6 +36,20 @@
 		}		
 	} 
 }     
+
+
+.story.story-hero
+{
+	> .m_list{
+		background-color:#4c575d;
+		color:#efefef;
+	}
+	> .module.summary
+	{
+		background-color: #ebebeb;
+	}
+
+}
 
 .form
 {
